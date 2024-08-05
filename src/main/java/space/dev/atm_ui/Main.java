@@ -39,6 +39,24 @@ public class Main extends Application {
         stage.show();
     }
 
+    public void ToInsertMoney(Stage stage) throws IOException{
+        FXMLLoader InsertMoneyLoad = new FXMLLoader(Main.class.getResource("insertmoney.fxml"));
+        Scene ATM = new Scene(InsertMoneyLoad.load(), 480, 336);
+        stage.setTitle("Space-Bank");
+        stage.setResizable(false);
+        stage.setScene(ATM);
+        stage.show();
+    }
+
+    public void ToTakeMoney(Stage stage) throws IOException{
+        FXMLLoader InsertMoneyLoad = new FXMLLoader(Main.class.getResource("takemoney.fxml"));
+        Scene ATM = new Scene(InsertMoneyLoad.load(), 480, 336);
+        stage.setTitle("Space-Bank");
+        stage.setResizable(false);
+        stage.setScene(ATM);
+        stage.show();
+    }
+
     public static void main(String[] args) {
         launch();
     }

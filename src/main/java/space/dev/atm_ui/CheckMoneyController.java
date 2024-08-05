@@ -21,4 +21,5 @@ public class CheckMoneyController {
         moneyText.setText(new DataUser().money + " RUB");
     }
 
+
 }

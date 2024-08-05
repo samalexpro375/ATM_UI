@@ -6,14 +6,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="392.0" style="-fx-background-color: #333;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="space.dev.atm_ui.MainController">
    <children>
       <AnchorPane prefHeight="66.0" prefWidth="392.0" style="-fx-background-color: black;">
          <children>
-            <Text fill="#4ef8a6" layoutX="121.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SPACE">
+            <Text fill="#4ef8a6" layoutX="112.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SPACE">
                <font>
-                  <Font size="46.0" />
+                  <Font name="System Bold" size="46.0" />
                </font>
             </Text>
          </children>

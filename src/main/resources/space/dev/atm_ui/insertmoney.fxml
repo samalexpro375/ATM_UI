@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="336.0" prefWidth="480.0" style="-fx-background-color: #333;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="space.dev.atm_ui.InsertMoneyController">
+   <children>
+      <AnchorPane prefHeight="64.0" prefWidth="480.0" style="-fx-background-color: black;">
+         <children>
+            <Text fill="WHITE" layoutX="156.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SPACE">
+               <font>
+                  <Font name="System Bold" size="46.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="insertmoneyField" layoutX="7.0" layoutY="84.0" prefHeight="54.0" prefWidth="466.0" promptText="Введите сумму которую хотите внести..." />
+      <Button fx:id="insertMoneyButton" layoutX="107.0" layoutY="187.0" mnemonicParsing="false" text="Подтвердить">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

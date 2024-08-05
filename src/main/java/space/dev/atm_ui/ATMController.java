@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 
 public class ATMController {
     public Stage checkMoneyS = new Stage();
+    public Stage insertMoneyS = new Stage();
+    public Stage takeMoneyS = new Stage();
     @FXML
     private ResourceBundle resources;
 
@@ -31,10 +33,27 @@ public class ATMController {
     void initialize() {
         checkMoney.setOnAction(event -> {
             try {
-
                 new Main().ToCheckMoney(checkMoneyS);
             }
             catch (IOException io)
+            {
+                System.out.println("Ошибка!");
+            }
+        });
+        insertMoney.setOnAction(event ->{
+            try {
+                new Main().ToInsertMoney(insertMoneyS);
+            }
+            catch (IOException io)
+            {
+                System.out.println("Ошибка!");
+            }
+        });
+        takeMoney.setOnAction(event ->{
+            try{
+                new Main().ToTakeMoney(takeMoneyS);
+            }
+            catch (Exception e)
             {
                 System.out.println("Ошибка!");
             }
