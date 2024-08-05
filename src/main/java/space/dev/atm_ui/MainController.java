@@ -55,6 +55,10 @@ public class MainController {
             if(x == 2){
                 VerifyUser = true;
             }
+            if(VerifyUser == false)
+            {
+                x = 0;
+            }
             if (VerifyUser == true)
             {
                 try {
