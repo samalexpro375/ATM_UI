@@ -30,6 +30,15 @@ public class Main extends Application {
         }
     }
 
+    public void ToCheckMoney(Stage stage) throws IOException{
+        FXMLLoader CheckMoneyLoad = new FXMLLoader(Main.class.getResource("checkMoney.fxml"));
+        Scene ATM = new Scene(CheckMoneyLoad.load(), 373, 223);
+        stage.setTitle("Space-Bank");
+        stage.setResizable(false);
+        stage.setScene(ATM);
+        stage.show();
+    }
+
     public static void main(String[] args) {
         launch();
     }
