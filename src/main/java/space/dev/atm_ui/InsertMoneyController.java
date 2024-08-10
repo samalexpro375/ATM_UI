@@ -1,5 +1,7 @@
 package space.dev.atm_ui;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -23,6 +25,13 @@ public class InsertMoneyController {
     @FXML
     void initialize() {
         insertMoneyButton.setOnAction(event ->{
+            try (FileWriter fileWriter = new FileWriter(DataUser.filePath)){
+                fileWriter.write("" + DataUser.money);
+            }
+            catch (IOException io)
+            {
+                System.out.println("Ошибка! " + io.getMessage());
+            }
             try{
                 new DataUser().money += Integer.valueOf(insertmoneyField.getText());
                 insertmoneyField.setText("Успешно!");

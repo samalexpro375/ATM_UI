@@ -5,11 +5,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(DataUser.filePath))) {
+            String line = reader.readLine();
+            DataUser.money = Integer.parseInt(line);
+        } catch (IOException e) {
+            System.out.println("Ошибка чтения из файла: " + e.getMessage());
+            DataUser.money = 0;
+        }
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("log.fxml"));
         Scene loginScene = new Scene(fxmlLoader.load(), 392, 482);
         stage.setTitle("Space-Bank");
