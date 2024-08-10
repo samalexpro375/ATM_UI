@@ -26,19 +26,19 @@ public class TakeMoneyController {
     @FXML
     void initialize() {
         takeMoneyButton.setOnAction(event ->{
-            try (FileWriter fileWriter = new FileWriter(DataUser.filePath)){
-                fileWriter.write("" + DataUser.money);
-            }
-            catch (IOException io)
-            {
-                System.out.println("Ошибка! " + io.getMessage());
-            }
             try{
                 new DataUser().money -= Integer.valueOf(takemoneyField.getText());
                 takemoneyField.setText("Успешно!");
             }
             catch (Exception e){
                 takemoneyField.setText("Ошибка!");
+            }
+            try (FileWriter fileWriter = new FileWriter(DataUser.filePath)){
+                fileWriter.write("" + DataUser.money);
+            }
+            catch (IOException io)
+            {
+                System.out.println("Ошибка! " + io.getMessage());
             }
         });
     }
